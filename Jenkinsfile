@@ -7,6 +7,12 @@ pipeline {
      }
    }
   stage ('test') {
+    when {
+      expression {
+         BRANCH_NAME == "main" || BRANCH_NAME == "master"
+      }
+
+    }
    steps {
    echo "This is test stage"
      }
