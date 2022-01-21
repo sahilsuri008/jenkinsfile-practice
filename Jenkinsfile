@@ -3,11 +3,15 @@ pipeline {
   environment {
      NEW_VERSION = "1.1"
   }
+ tools {
+  maven "maven"
+ }
  stages {
   stage ('build') {
    steps {
    echo "This is build stage"
    sh 'printenv'
+   sh "mvn --version"
      }
    }
   stage ('test') {
