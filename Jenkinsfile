@@ -10,7 +10,7 @@ pipeline {
   stage ('test') {
     when {
       expression {
-         STAGE_NAME == "test" || STAGE_NAME == "test"
+         STAGE_NAME == "QA" || STAGE_NAME == "UAT"
       }
 
     }
