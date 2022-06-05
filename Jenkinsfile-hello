@@ -12,7 +12,7 @@ pipeline {
     stage ('HelloWorld') {
       steps {
         echo "My first Jenkins job"
-        sh "uname -a"
+        sh "uname -n"
         }
       }
    }
