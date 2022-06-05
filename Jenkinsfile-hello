@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   stages {
-    stage 'poll scm') {
+    stage ('poll scm') {
       steps {
         properties([[$class: 'GithubProjectProperty', displayName: '',
         projectUrlStr: 'https://github.com/sahilsuri008/jenkinsfile-practice.git'],
