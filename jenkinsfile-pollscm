@@ -20,7 +20,7 @@ pipeline {
         }
          stage('Do the deployment') {
             steps {
-                echo ">> Run deploy applications now!"
+                echo ">> Run deploy applications imediately"
             }
         }
     }
