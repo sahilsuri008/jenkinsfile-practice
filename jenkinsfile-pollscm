@@ -2,9 +2,7 @@ properties([pipelineTriggers([githubPush()])])
  
 pipeline {
     /* specify nodes for executing */
-    agent {
-        label 'github-ci'
-    }
+    agent any
  
     stages {
         /* checkout repo */
@@ -12,10 +10,10 @@ pipeline {
             steps {
                 checkout([
                  $class: 'GitSCM',
-                 branches: [[name: 'master']],
+                 branches: [[name: 'main']],
                  userRemoteConfigs: [[
-                    url: 'git@github.com:wshihadeh/rabbitmq_client.git',
-                    credentialsId: '',
+                    url: 'ggit@github.com:sahilsuri008/jenkinsfile-practice.git',
+                    credentialsId: '1cb6bd51-d866-4229-8549-1698375b867a',
                  ]]
                 ])
             }
