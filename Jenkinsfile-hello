@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage ('checkout scm) {
+    stage ('checkout scm') {
       steps {
         git branch: 'main', credentialsId: '1cb6bd51-d866-4229-8549-1698375b867a', url: 'https://github.com/sahilsuri008/jenkinsfile-practice.git'
        }
