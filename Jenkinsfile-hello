@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  trigger {
+    pollSCM('') //Empty quotes tells it to build on a push
+   }
   stages {
     stage ('checkout scm') {
       steps {
