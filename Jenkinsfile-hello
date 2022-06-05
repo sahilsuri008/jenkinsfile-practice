@@ -1,9 +1,14 @@
-properties([pipelineTriggers([githubPush()])])
-
 pipeline {
   agent any
 
   stages {
+    stage 'poll scm') {
+      steps {
+        properties([[$class: 'GithubProjectProperty', displayName: '',
+        projectUrlStr: 'https://github.com/sahilsuri008/jenkinsfile-practice.git'],
+        pipelineTriggers([githubPush()])])
+        }
+     }
     stage ('checkout scm') {
       steps {
         git branch: 'main', credentialsId: '1cb6bd51-d866-4229-8549-1698375b867a', url: 'https://github.com/sahilsuri008/jenkinsfile-practice.git'
